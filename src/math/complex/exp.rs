@@ -1,6 +1,8 @@
 use super::{cis::cis, complex::Complex};
+use wasm_bindgen::prelude::*;
 
 /// Returns e^z for complex z.
+// #[wasm_bindgen]
 pub fn exp(z: Complex) -> Complex {
     let magnitude = z.re.exp();
 

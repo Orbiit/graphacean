@@ -1,8 +1,6 @@
-mod utils;
-
 mod math;
-pub use math::complex::complex::Complex;
-
+mod utils;
+pub use math::complex::{complex_functions, Complex};
 use wasm_bindgen::prelude::*;
 
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
