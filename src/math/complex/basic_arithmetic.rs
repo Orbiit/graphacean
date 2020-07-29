@@ -1,5 +1,3 @@
-use wasm_bindgen::prelude::*;
-
 use super::complex::Complex;
 
 /// Returns a + b.
