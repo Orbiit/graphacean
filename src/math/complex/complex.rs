@@ -1,7 +1,8 @@
 use wasm_bindgen::prelude::*;
 
-#[wasm_bindgen]
 /// Represents a complex number, with a real part and an imaginary part both represented by floats.
+#[wasm_bindgen]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub struct Complex {
     pub re: f64,
     pub im: f64,
@@ -53,25 +54,12 @@ impl Complex {
         }
     }
 
-    /// Clone this complex number.
-    pub fn clone(&self) -> Self {
-        Self {
-            re: self.re,
-            im: self.im,
-        }
-    }
-
     /// Scale this complex number by the real factor r.
     pub fn scale(&self, r: f64) -> Self {
         Self {
             re: self.re * r,
             im: self.im * r,
         }
-    }
-
-    /// Check whether this complex number is equal to another.
-    pub fn equals(&self, z: Self) -> bool {
-        self.re == z.re && self.im == z.im
     }
 
     /// Return a complex number pointing in the same direction, with magnitude 1.

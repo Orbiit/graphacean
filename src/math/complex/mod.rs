@@ -1,1 +1,24 @@
-pub mod complex;
+mod basic_arithmetic;
+mod cis;
+mod complex;
+// mod digamma;
+// mod erf;
+mod exp;
+// mod exp_integral;
+pub mod functions;
+// mod gamma;
+mod hyperbolic_trig_functions;
+// mod inverse_hyperbolic;
+// mod inverse_trig;
+// mod ln_gamma;
+mod log;
+// mod misc_special;
+// mod polygamma;
+mod pow;
+// mod trig_functions;
+// mod trig_integrals;
+// mod trigamma;
+// mod zeta;
+
+pub use complex::Complex;
+pub use functions as complex_functions;
