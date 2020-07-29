@@ -15,11 +15,11 @@
   </head>
   <body>
     <script type="module">
-      import init, { greet } from './pkg/graphacean.js'
+      import init, * as mod from './pkg/graphacean.js'
 
       async function main () {
         await init()
-        greet()
+        Object.assign(window, mod)
       }
       main()
     </script>
