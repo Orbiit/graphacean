@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Graphacean</title>
+    <meta name="description" content="Grapheme but in Rust"/>
+
+    <style>
+      body {
+        background-color: #13141d;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="module">
+      import init, { greet } from './pkg/graphacean.js'
+
+      async function main () {
+        await init()
+        greet()
+      }
+      main()
+    </script>
+  </body>
+</html>
