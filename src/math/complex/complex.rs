@@ -54,14 +54,6 @@ impl Complex {
         }
     }
 
-    /// Clone this complex number.
-    pub fn clone(&self) -> Self {
-        Self {
-            re: self.re,
-            im: self.im,
-        }
-    }
-
     /// Scale this complex number by the real factor r.
     pub fn scale(&self, r: f64) -> Self {
         Self {

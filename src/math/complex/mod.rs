@@ -4,3 +4,4 @@ pub mod complex;
 pub mod exp;
 pub mod hyperbolic_trig_functions;
 pub mod log;
+pub mod pow;
