@@ -15,7 +15,7 @@ mod log;
 // mod misc_special;
 // mod polygamma;
 mod pow;
-// mod trig_functions;
+mod trig_functions;
 // mod trig_integrals;
 // mod trigamma;
 // mod zeta;
