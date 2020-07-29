@@ -1,7 +1,7 @@
 mod utils;
 
 mod math;
-pub use math::complex::complex;
+pub use math::complex::complex::Complex;
 
 use wasm_bindgen::prelude::*;
 

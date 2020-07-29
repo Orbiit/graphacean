@@ -1,7 +1,7 @@
 use wasm_bindgen::prelude::*;
 
-#[wasm_bindgen]
 /// Represents a complex number, with a real part and an imaginary part both represented by floats.
+#[wasm_bindgen]
 pub struct Complex {
     pub re: f64,
     pub im: f64,
