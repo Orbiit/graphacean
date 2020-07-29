@@ -14,7 +14,7 @@ pub use super::{
     // misc_special::*,
     // polygamma::polygamma,
     pow::*,
-    // trig_functions::*,
+    trig_functions::*,
     // trig_integrals::*,
     // trigamma::trigamma,
     // zeta::{eta, zeta},
