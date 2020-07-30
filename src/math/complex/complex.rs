@@ -17,16 +17,19 @@ impl Complex {
     /// * `re` - The real part of the complex number.
     ///
     /// * `im` - The imaginary part of the complex number.
+    #[wasm_bindgen(constructor)]
     pub fn new(re: f64, im: f64) -> Self {
         Self { re, im }
     }
 
     /// Get i.
+    #[wasm_bindgen(js_name = I)]
     pub fn i() -> Self {
         Self { re: 0.0, im: 1.0 }
     }
 
     /// Get 1.
+    #[wasm_bindgen(js_name = One)]
     pub fn one() -> Self {
         Self { re: 1.0, im: 0.0 }
     }
@@ -42,6 +45,7 @@ impl Complex {
     }
 
     /// Returns |z|^2.
+    #[wasm_bindgen(js_name = magnitudeSquared)]
     pub fn magnitude_squared(&self) -> f64 {
         self.re * self.re + self.im * self.im
     }
@@ -54,12 +58,25 @@ impl Complex {
         }
     }
 
+    /// Clone this complex number.
+    pub fn clone(&self) -> Complex {
+        Self {
+            re: self.re,
+            im: self.im,
+        }
+    }
+
     /// Scale this complex number by the real factor r.
     pub fn scale(&self, r: f64) -> Self {
         Self {
             re: self.re * r,
             im: self.im * r,
         }
+    }
+
+    /// Check whether this complex number is equal to another.
+    pub fn equals(&self, z: &Complex) -> bool {
+        self.eq(z)
     }
 
     /// Return a complex number pointing in the same direction, with magnitude 1.
