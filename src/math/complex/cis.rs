@@ -2,7 +2,7 @@ use super::complex::Complex;
 use wasm_bindgen::prelude::*;
 
 /// Returns e^(i theta) for real theta.
-#[wasm_bindgen]
+#[wasm_bindgen(js_name = ComplexFunctions_Cis)]
 pub fn cis(theta: f64) -> Complex {
     let c = theta.cos();
     let s = theta.sin();
